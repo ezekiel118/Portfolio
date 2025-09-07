@@ -1,0 +1,83 @@
+style.css
+
+body,html{
+  background-color: #0F1D3C;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: right; 
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+ 
+}
+
+nav ul li a:hover {
+  color: #2a60b2; 
+ 
+}
+
+
+.left img {
+  width: 180px;
+  height: 280px;
+  border-radius: 50%; /* tall oval */
+  object-fit: cover;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
+  background-color: #0b1a3a; /* dark blue background */
+  color: white;
+  gap: 40px;
+}
+
+
+
+/* Text on right */
+.right {
+  max-width: 600px;
+}
+
+.right h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.right h1 span {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* Paragraph (description) */
+.right p {
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* Contact info */
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

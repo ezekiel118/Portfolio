@@ -67,40 +67,49 @@ section {
   font-weight: 600;
 }
 
-/*hahaj*/
-
 .skills {
-  padding: 3rem 10%;
-  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #0b1a3a; /* page background (same as before) */
 }
 
-.skills h2 {
+.card {
+  flex: 1;
+  min-height: 800px;     /* adjust height */
+  background-color: #0f4c5c; /* box color */
+  border-radius: 15px;
+  padding: 20px;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 60px;
+  color: #fff;
+text-align: center;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.card ul li {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #5a2d82;
+  margin: 8px 0;
+  font-size: 35px;
+}
+.card ul li   h6{
+  text-align: end;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
+.card li {
+  color: #000000;
 }
-
-.skill-card {
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  background: #fafafa;
-  transition: 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.skill-card img {
-  width: 60px;
-  margin-bottom: 0.5rem;
+.card h6{
+  color: #ffffff;
 }

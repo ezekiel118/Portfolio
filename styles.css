@@ -1,5 +1,3 @@
-style.css
-
 body,html{
   background-color: #0F1D3C;
 }
@@ -56,8 +54,8 @@ section {
 }
 
 .right h1 span {
-  color: #544e4e;
-  font-weight: 900;
+  color: #000000;
+  font-size: larger;
 }
 
 .right p {
@@ -67,49 +65,72 @@ section {
   font-weight: 600;
 }
 
-.skills {
+.card-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 40px; /* space between cards */
+  margin-top: 20px;
   padding: 20px;
-  background-color: #0b1a3a; /* page background (same as before) */
 }
 
 .card {
-  flex: 1;
-  min-height: 800px;     /* adjust height */
-  background-color: #0f4c5c; /* box color */
-  border-radius: 15px;
-  padding: 20px;
-  color: #e0e0e0;
-  font-family: Arial, sans-serif;
+  width: 325px;
+  background: linear-gradient(145deg, #2a60b2, #1d3f73); /* gradient */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  text-align: center;       
+  padding: 20px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.card h2 {
-  margin-bottom: 15px;
-  font-size: 60px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+/* Individual images */
+#css {
+  width: 100%;  
+  height: auto;
+  margin-top: 16px;
+}
+
+#ard {
+  width: 95%; 
+  height: auto;
+  margin-top: 30px; /* reduced so spacing looks balanced */
+}
+
+#word {
+  width: 90%;  
+  height: auto;
+  margin-top: 16px;
+}
+
+/* Card text */
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 12px 0 8px;
+  font-size: 22px;
+  font-weight: bold;
   color: #fff;
-text-align: center;
 }
 
-.card ul {
-  list-style: none;
-  padding: 0;
-  
+.card-content p {
+  font-size: 16px;
+  color: #e0e0e0;
+  line-height: 1.5;
 }
 
-.card ul li {
-  text-align: center;
-  margin: 8px 0;
-  font-size: 35px;
-}
-.card ul li   h6{
-  text-align: end;
-}
 
-.card li {
-  color: #000000;
-}
-.card h6{
-  color: #ffffff;
-}
+
+

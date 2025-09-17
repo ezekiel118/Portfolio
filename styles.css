@@ -86,11 +86,184 @@ section {
   line-height: 1.6;
 }
 
-/* Skills Section */
-#skills {
+
+/* ================= Education Section ================= */
+.education-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0a0a0a, #0f1d3c, #2a60b2);
   text-align: center;
+  background: transparent; /* seamless with body background */
+}
+
+.education-section h2 {
+  font-size: 55px;
+  font-weight: 900;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #fff, #00d4ff, #2a60b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+/* Container for cards */
+.education-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin: 0 auto;
+  max-width: 1200px; /* keeps centered */
+}
+
+/* Education Card Design */
+.education-card {
+  width: 280px;
+  background: rgba(42, 96, 178, 0.15); 
+  backdrop-filter: blur(12px) saturate(140%); 
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 28px 22px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.education-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+}
+
+/* Glow effect border */
+.education-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #00d4ff, #2a60b2, #ffffff);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Images */
+.education-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #00d4ff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Card Titles & Text */
+.education-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.education-card p {
+  font-size: 17px;
+  color: #dbe4f3;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ================= Skills Section ================= */
+
+.card-container {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  flex-wrap: wrap;          /* allows wrapping to next row */
+  gap: 40px;
+  max-width: 1100px;        /* keeps them grouped in the middle */
+  margin: 0 auto;           /* centers the whole row */
+  padding: 0 20px;          /* prevents touching edges */
+}
+
+/* Modern Card Design */
+.card {
+  width: 320px;
+  background: rgba(42, 96, 178, 0.15); /* semi-transparent for glass look */
+  backdrop-filter: blur(12px) saturate(140%); 
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  padding: 30px 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.04) rotateX(2deg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+}
+
+/* Glow effect on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #00d4ff, #2a60b2, #ffffff);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Card Images */
+.card img {
+  width: 85%;
+  max-height: 190px;
+  object-fit: contain;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
 }
 
 .skills-header h2 {
@@ -106,59 +279,4 @@ section {
   font-size: 22px;
   color: #dbe4f3;
   margin-bottom: 50px;
-}
-
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-
-.card {
-  width: 320px;
-  background: linear-gradient(145deg, #1c2a4a, #2a60b2);
-  border-radius: 16px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 25px 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-}
-
-
-.card img {
-  width: 80%;
-  max-height: 180px;
-  object-fit: contain;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover img {
-  transform: scale(1.08);
-}
-
-
-.card-content h3 {
-  font-size: 22px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.card-content p {
-  font-size: 16px;
-  color: #dbe4f3;
-  line-height: 1.6;
 }

@@ -140,6 +140,72 @@
       </div>
     </div>
   </div>
-     
+</section>
+
+<!-- Projects Section (grouped covers that open a carousel) -->
+<section id="Project" class="projects-section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-group" data-group="AGS" tabindex="0" role="button" aria-pressed="false">
+      <img src="picture/ags1.jpg" alt="AGS Projects Cover">
+      <h3>AGS Projects</h3>
+      <p>Click to view AGS gallery</p>
+    </div>
+
+    <div class="project-group" data-group="POS" tabindex="0" role="button" aria-pressed="false">
+      <img src="picture/POS1.png" alt="POS Projects Cover">
+      <h3>POS Projects</h3>
+      <p>Click to view POS gallery</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal / Lightbox for gallery -->
+<div id="galleryModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-label="Project gallery">
+    <button id="modalClose" class="modal-close" aria-label="Close gallery">×</button>
+    <button id="modalPrev" class="modal-nav modal-prev" aria-label="Previous image">❮</button>
+    <div class="modal-image-wrap">
+      <img id="modalImage" src="" alt="Project image">
+      <div id="modalCaption" class="modal-caption"></div>
+    </div>
+    <button id="modalNext" class="modal-nav modal-next" aria-label="Next image">❯</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- Contact Section -->
+<section id="Contact" class="contact-section">
+  <h2>Get In Touch</h2>
+  <p>Feel free to reach out to me through any of these platforms!</p>
+  <div class="contact-links">
+    <a href="https://web.facebook.com/ezekiel.ramirez.118" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Facebook">
+      <span class="contact-icon">f</span>
+      <span class="contact-text">Facebook</span>
+    </a>
+    <a href="ramirezjohnezekiel118@gmail.com" class="contact-link" aria-label="Gmail">
+      <span class="contact-icon">✉</span>
+      <span class="contact-text">Gmail</span>
+    </a>
+    <a href="https://github.com/ezekiel118" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub">
+      <span class="contact-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </span>
+      <span class="contact-text">GitHub</span>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 John Ezekiel Ramirez. All rights reserved.</p>
+    <p>Designed & developed with passion.</p>
+  </div>
+</footer>
+    
 </body>
 </html>

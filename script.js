@@ -2,7 +2,7 @@
 (function(){
   const galleries = {
     AGS: ['picture/ags1.jpg','picture/ags2.jpg','picture/ags3.png','video/agsvid.mp4'],
-    POS: ['picture/POS1.png','picture/POS2.png','picture/POS3.png','picture/POS4.png']
+    POS: ['picture/POS1.PNG','picture/POS2.PNG','picture/POS3.PNG','picture/POS4.PNG']
   };
 
   // Map of which items are videos (instead of images)
